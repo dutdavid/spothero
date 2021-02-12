@@ -4,8 +4,6 @@
 <?php include('sidebar.php');?>
 <?php include('connect.php');
 
-
- 
   ?>
 <div class="pcoded-content">
 <div class="pcoded-inner-content">

@@ -41,8 +41,7 @@ echo "<script>window.location.href ='manage-incomingvehicle.php'</script>";
 <div class="page-header-title">
 <div class="d-inline">
 <h4>Add Vehicle</h4>
-<!--  Author Name: Mayuri K. 
- for any PHP, Codeignitor or Laravel work contact me at mayuri.infospace@gmail.com  -->
+
 </div>
 </div>
 </div>
@@ -69,8 +68,7 @@ echo "<script>window.location.href ='manage-incomingvehicle.php'</script>";
 
 <div class="card">
 <div class="card-header">
-<!-- <h5>Basic Inputs Validation</h5>
-<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span> -->
+
 </div>
 <div class="card-block">
 <form id="main" method="post" enctype="multipart/form-data">
@@ -139,8 +137,5 @@ while($row=mysqli_fetch_array($query))
 </div>
 </div>
 </div>
-
-<!--  Author Name: Mayuri K. 
- for any PHP, Codeignitor or Laravel work contact me at mayuri.infospace@gmail.com  -->
 
 <?php include('footer.php');?>

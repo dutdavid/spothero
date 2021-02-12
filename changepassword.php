@@ -78,8 +78,6 @@ else {
     
   }
 }
-
-
 ?>
 <div class="pcoded-content">
 <div class="pcoded-inner-content">
@@ -93,7 +91,6 @@ else {
 <div class="page-header-title">
 <div class="d-inline">
 <h4>Change Password</h4>
-
 </div>
 </div>
 </div>
@@ -110,8 +107,6 @@ else {
 </div>
 </div>
 </div>
-
-
 <div class="page-body">
 <div class="row">
 <div class="col-sm-12">
@@ -144,12 +139,6 @@ else {
 <span class="messages"></span>
 </div>
 </div>
-
-
-
-
-
-
 <div class="form-group row">
 <label class="col-sm-2"></label>
 <div class="col-sm-10">

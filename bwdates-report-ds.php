@@ -3,11 +3,7 @@
 <?php include('header.php');?>
 <?php include('sidebar.php');?>
 <?php include('connect.php');
-
-
- 
-
-  ?>
+?>
 <div class="pcoded-content">
 <div class="pcoded-inner-content">
 
@@ -20,7 +16,6 @@
 <div class="page-header-title">
 <div class="d-inline">
 <h4>Between Dates Reports</h4>
-
 
 </div>
 </div>
@@ -61,23 +56,16 @@
                                         <div class="col col-md-3"><label for="email-input" class=" form-control-label">To Date</label></div>
                                         <div class="col-12 col-md-9"><input type="date" name="todate"  class="form-control" required="true"></div>
                                     </div>
-                                   
-                                   
-                                  
-                                    
-                                    
+                              
                                    <p style="text-align: center;"> <button type="submit" class="btn btn-primary m-b-0" name="submit" >Submit</button></p>
                                 </form>
                             </div>
                             
                         </div>
 
-
-</div>
-
 </div>
 </div>
-
+</div>
 <div id="#">
 </div>
 </div>
