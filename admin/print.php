@@ -2,9 +2,6 @@
 session_start();
 error_reporting(0);
 include('connect.php');
-
-
-
 ?>          
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
