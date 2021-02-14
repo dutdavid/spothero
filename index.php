@@ -1,132 +1,257 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+include('includes/config.php');
+error_reporting(0);
+
+?>
+
+<!DOCTYPE HTML>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style/user.css">
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>Car Rental Portal</title>
+<!--Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css">
+<link href="assets/css/slick.css" rel="stylesheet">
+<link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/orange.css" title="orange" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/blue.css" title="blue" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/pink.css" title="pink" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/green.css" title="green" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/purple.css" title="purple" media="all" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> 
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Spot Hero</a>
+
+<!-- Start Switcher -->
+<?php include('includes/colorswitcher.php');?>
+<!-- /Switcher -->  
+        
+<!--Header-->
+<?php include('includes/header.php');?>
+<!-- /Header --> 
+
+<!-- Banners -->
+<section id="banner" class="banner-section">
+  <div class="container">
+    <div class="div_zindex">
+      <div class="row">
+        <div class="col-md-5 col-md-push-7">
+          <div class="banner_content">
+            <h1>Spot Hero.</h1>
+            <p>Find your spot in our parking lot. </p>
+        </div>
+      </div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
   </div>
-</nav>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" style="display: none;">
-<g id="RuedaBike">    
-<line id="Valvula" x1="150" y1="50" x2="150" y2="75" stroke="#333" stroke-width="4" />
-<g id="Rayos" class="Rayo">
-  <line x1="150" y1="145" x2="50" y2="140"  />
-  <line x1="150" y1="155" x2="50" y2="160"  />
-  <line x1="150" y1="145" x2="60" y2="115"  />  
-  <line x1="150" y1="155" x2="60" y2="185"  />
-</g>
-  <use xlink:href="#Rayos" transform="rotate(60, 150, 150)" />
-  <use xlink:href="#Rayos" transform="rotate(120, 150, 150)" />
-  <use xlink:href="#Rayos" transform="rotate(180, 150, 150)" />
-  <use xlink:href="#Rayos" transform="rotate(240, 150, 150)" />
-  <use xlink:href="#Rayos" transform="rotate(300, 150, 150)" /> 
-<g id="Neumatico">
-  <circle cx="150" cy="150" r="100" class="Llanta"/>
-  <circle cx="150" cy="150" r="100" class="Tacos"/>
-  <circle cx="150" cy="150" r="90" class="Rin"/>
-<g id="Eje">
-  <circle cx="150" cy="150" r="15" fill="#999"/>
-  <circle cx="150" cy="150" r="5" />
-</g> 
-</g>
-</svg>
+</section>
+<!-- /Banners --> 
+
+<style>
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #7aa8b7;
+        border-radius: 6px;
+        outline: none;
+      }
+    </style>
+<!-- Resent Cat-->
+<section class="section-padding gray-bg">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Book your <span>parking space with just a click of a button</span></h2>
+     </p>
+    </div>
+    <div class="row"> 
+      
+      <!-- Nav tabs -->
+      <div class="recent-tab">
+        <ul class="nav nav-tabs" role="tablist">
+        <a class="button" href="add-vehicle.php">Book Spot</a>
+        </ul>
+      </div>
+      <!-- Recently Listed New Cars -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="resentnewcar">
+
+<?php $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.SeatingCapacity,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{  
+?>  
+
+<div class="col-list-3">
+<div class="recent-car-list">
+<div class="car-info-box"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" class="img-responsive" alt="image"></a>
+<ul>
+<li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
+<li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> Model</li>
+<li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
+</ul>
+</div>
+<div class="car-title-m">
+<h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></a></h6>
+<span class="price">$<?php echo htmlentities($result->PricePerDay);?> /Day</span> 
+</div>
+<div class="inventory_info_m">
+<p><?php echo substr($result->VehiclesOverview,0,70);?></p>
+</div>
+</div>
+</div>
+<?php }}?>
+       
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Resent Cat --> 
+
+<!-- Fun Facts-->
+<section class="fun-facts-section">
+  <div class="container div_zindex">
+    <div class="row">
+      <div class="col-lg-3 col-xs-6 col-sm-3">
+        <div class="fun-facts-m">
+          <div class="cell">
+            <h2><i class="fa fa-calendar" aria-hidden="true"></i>40+</h2>
+            <p>Years In Business</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-6 col-sm-3">
+        <div class="fun-facts-m">
+          <div class="cell">
+            <h2><i class="fa fa-car" aria-hidden="true"></i>1200+</h2>
+            <p>New Cars For Sale</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-6 col-sm-3">
+        <div class="fun-facts-m">
+          <div class="cell">
+            <h2><i class="fa fa-car" aria-hidden="true"></i>1000+</h2>
+            <p>Used Cars For Sale</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-6 col-sm-3">
+        <div class="fun-facts-m">
+          <div class="cell">
+            <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>600+</h2>
+            <p>Satisfied Customers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Fun Facts--> 
+
+
+<!--Testimonial -->
+<section class="section-padding testimonial-section parallex-bg">
+  <div class="container div_zindex">
+    <div class="section-header white-text text-center">
+      <h2>Our Satisfied <span>Customers</span></h2>
+    </div>
+    <div class="row">
+      <div id="testimonial-slider">
+<?php 
+$tid=1;
+$sql = "SELECT tbltestimonial.Testimonial,tblusers.FullName from tbltestimonial join tblusers on tbltestimonial.UserEmail=tblusers.EmailId where tbltestimonial.status=:tid";
+$query = $dbh -> prepare($sql);
+$query->bindParam(':tid',$tid, PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{  ?>
+
+
+        <div class="testimonial-m">
+          <div class="testimonial-img"> <img src="assets/images/cat-profile.png" alt="" /> </div>
+          <div class="testimonial-content">
+            <div class="testimonial-heading">
+              <h5><?php echo htmlentities($result->FullName);?></h5>
+            <p><?php echo htmlentities($result->Testimonial);?></p>
+          </div>
+        </div>
+        </div>
+        <?php }} ?>
+        
+       
   
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" style="display: none;"> 
- <symbol id="Cuadro" viewBox="0 0 800 600">
-  <polyline points="323.2,241.7 217.3,354.2 354.5,354.2 318.8,225.8 " stroke-linejoin="round" stroke-width="11"/>
-  <polyline points="519.6,213.3 506,177.9 323.2,241.7 " stroke-width="16"/>
-  <line x1="354.5" y1="354.2" x2="509" y2="185.7" stroke-width="16"/> 
- </symbol> 
-  <path id="Cadena" d="M208,369.2c-5.9-2.5-10-8.3-10-15c0-9,7.3-16.3,16.3-16.3l139.2-1c11.9,0,21.5,9.6,21.5,21.5c0,10.5-7.5,19.2-17.5,21.1 l-158.1,29.3c-4.1,0.8-8.8-2.2-8.8-7.3c0-3,1.8-5.7,4.4-6.8l13.5-6.6C216.4,384.1,216.1,372.6,208,369.2z"/>
-</svg>
-  <!-- Visible -->  
-<div class="Bicicletas">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" >
-<g id="gAnterior">   
-  <g class="Pedaleo">
-   <line id="PedalI" class="Pedal" x1="344" y1="309" x2="364" y2="309" />
-   <line class="PalaPedal" x1="354" y1="309" x2="354" y2="359" />
-  </g>
-  <g class="Rodando Trasera">
-  <use xlink:href="#RuedaBike" width="300" height="300" x="64.28" y="204"  />
-  <circle cx="214.28" cy="354" r="25" class="Dientes" stroke="#666" fill="#666"  />
-  <circle cx="214.28" cy="354" r="21" class="Dientes" stroke="#999" fill="#999"  />
-  <circle cx="214.28" cy="354" r="17" class="Dientes" stroke="#666" fill="#666"  />
-  </g>
-  <g class="Rodando Delantera">
-  <use xlink:href="#RuedaBike" width="300" height="300" x="435.7" y="204"  />
-  <use xlink:href="#Estrella" x="114.5" y="-75.5" transform="scale(1.25)" stroke="#999" stroke-width="3.5"/> 
-  </g> 
-  <g class="Componentes">
-    <g id="Cables" stroke-width="2">
-      <path d="M548,257c0-24,1-93-40-108"/>
-      <path d="M514,151c21-2.8,25,14-6,42"/>
-      <path d="M509,195c18-8,37.8-34,7-43"/>
-    </g>
-    <polygon id="Asiento" points="337.7,141.5 254.7,141.5 280,151.2 " stroke-width="7" fill="black"/>
-    <line id="EspigaAsiento" x1="318.8" y1="225.8" x2="297.2" y2="148.1" stroke-width="7"/>
-    <polyline id="Manillar" points="504.1,174.1 498.3,159 520.3,145.8 499.1,137 " stroke-width="13" stroke-linecap="round"/>
-    <line id="Tijera" x1="580.9" y1="359" x2="524.5" y2="211.4" stroke-width="13"/>
-  </g> 
-</g>  
-<use xlink:href="#Cuadro" class="CuadroI" />
-<g id="gPosterior"> 
-  <g class="Pedaleo">
-    <g stroke="#666" stroke-width="4">
-  <g id="Estrella" >
-  <line id="Gajo" x1="350" y1="350" x2="370" y2="350" fill="none" />
-  <use xlink:href="#Gajo" transform="rotate(60, 354, 359)" />
-  <use xlink:href="#Gajo" transform="rotate(120, 354, 359)" />
-  <use xlink:href="#Gajo" transform="rotate(180, 354, 359)" />
-  <use xlink:href="#Gajo" transform="rotate(240, 354, 359)" />
-  <use xlink:href="#Gajo" transform="rotate(300, 354, 359)" />
-  <circle cx="354" cy="359" r="18.5" fill="none"  />
-  </g> </g>
-  <circle cx="354" cy="359" r="20" class="Dientes" stroke="#666" fill="none"  />
-  <circle cx="354" cy="359" r="8"/> 
-   </g>
-  <circle id="Estrellita" cx="198" cy="401" r="6" class="Dientes" stroke="#999" fill="#999"  />
-  <use xlink:href="#Cadena" class="CadenaA" />
-  <use xlink:href="#Cadena" class="CadenaB" />
-  <use xlink:href="#Cadena" class="CadenaC" />
-  <g class="Rodando Trasera">
-  <circle cx="214.28" cy="354" r="13" class="Dientes" stroke="#999" fill="#999"  />
-  <circle cx="214.28" cy="354" r="9" class="Dientes" stroke="#666" fill="#666"  />
-  <circle cx="214.28" cy="354" r="5" class="Dientes" stroke="#999" fill="#999"  />
-  </g>
-  <polyline class="CuadroI" points="323.2,241.7 217.3,354.2 289.7,354.2 " stroke-width="11" stroke-linejoin="round"/>
-  <g class="Pedaleo"> 
-  <line class="PalaPedal" x1="354" y1="359" x2="354" y2="409" />
-  <line id="PedalD" class="Pedal" x1="344" y1="409" x2="364" y2="409" />
-  </g>
-  <polyline class="Componentes" points="198,401 223,387 201,367 217,354 " stroke-width="6" stroke-linecap="round"/>
-</g>
-</svg>  
+      </div>
+    </div>
   </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Testimonial--> 
+
+
+<!--Footer -->
+<?php include('includes/footer.php');?>
+<!-- /Footer--> 
+
+<!--Back to top-->
+<div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
+<!--/Back to top--> 
+
+<!--Login-Form -->
+<?php include('includes/login.php');?>
+<!--/Login-Form --> 
+
+<!--Register-Form -->
+<?php include('includes/registration.php');?>
+
+<!--/Register-Form --> 
+
+<!--Forgot-password-Form -->
+<?php include('includes/forgotpassword.php');?>
+<!--/Forgot-password-Form --> 
+
+<!-- Scripts --> 
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/interface.js"></script> 
+<!--Switcher-->
+<script src="assets/switcher/js/switcher.js"></script>
+<!--bootstrap-slider-JS--> 
+<script src="assets/js/bootstrap-slider.min.js"></script> 
+<!--Slider-JS--> 
+<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/owl.carousel.min.js"></script>
+
 </body>
 
-  </html>
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Jun 2017 07:22:11 GMT -->
+</html>
