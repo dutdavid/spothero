@@ -2,8 +2,8 @@
 // DB credentials.
 define('DB_HOST','localhost');
 define('DB_USER','root');
-define('DB_PASS','mysql');
-define('DB_NAME','carrental');
+define('DB_PASS','');
+define('DB_NAME','parking');
 // Establish database connection.
 try
 {

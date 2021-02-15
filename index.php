@@ -13,7 +13,7 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Car Rental Portal</title>
+<title>SPot Hero</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/style.css" type="text/css">
@@ -69,7 +69,7 @@ error_reporting(0);
         text-align: center;
         text-decoration: none;
         color: #ffffff;
-        background-color: #7aa8b7;
+        background-color: #31F237;
         border-radius: 6px;
         outline: none;
       }
