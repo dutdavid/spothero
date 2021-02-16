@@ -37,10 +37,7 @@ error_reporting(0);
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> 
 </head>
 <body>
-<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
-<!-- /Switcher -->  
-        
+
 <!--Header-->
 <?php include('includes/header.php');?>
 <!-- /Header --> 
@@ -49,94 +46,29 @@ error_reporting(0);
 <br>
 <br>
 
-<?php include('connect.php');
-if(isset($_POST['submit']))
-  {
-    $parkingnumber=mt_rand(100000000, 999999999);
-    $catename=$_POST['catename'];
-     $vehcomp=$_POST['vehcomp'];
-    $vehreno=$_POST['vehreno'];
-    $ownername=$_POST['ownername'];
-    $ownercontno=$_POST['ownercontno'];
-    $enteringtime=$_POST['enteringtime'];
-    
-     
-   $query=mysqli_query($conn, "insert into  tblvehicle(ParkingNumber,VehicleCategory,VehicleCompanyname,RegistrationNumber,OwnerName,OwnerContactNumber) value('$parkingnumber','$catename','$vehcomp','$vehreno','$ownername','$ownercontno')");
-    if ($query) {
-echo "<script>alert('Vehicle Entry Detail has been added');</script>";
-echo "<script>window.location.href ='manage-incomingvehicle.php'</script>";
-  }
-  else
-    {
-     echo "<script>alert('Something Went Wrong. Please try again.');</script>";       
-    }
+<!------ Include the above in your HEAD tag ---------->
+<style>
+</style>
+<section class="about-us py-5 " id="about-us">
+    <div class="container mt-5">
+	<div class="row">
+		<div class="col-md-6">
+		    <h1 class='text-success'>Welcome!</h1>
+		    <h2>Know More About Us</h2>
+		    <hr>
+		    <p>Spot Hero is one of the Kenya’s leading car park operators, with a well-deserved reputation for quality, efficiency and customer focus.
 
-  
-}
-?>
-<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+Our well-run car parks across the country offer real value and great service to the many thousands of people who park with us every day, conveniently located in town and city centres. .</p>
+		    <p>We offer tailor-made solutions that take the stress out of parking management for people in the property sector – landowners, house builders, agents and asset managers. We can help to unlock real potential from under-used sites.</p>
+		    
 
-
-<div class="card-block">
-<form id="main" method="post" enctype="multipart/form-data">
-
-
-
-
-<div class="form-group row">
-<label class="col-sm-2 col-form-label">Select</label>
-<div class="col-sm-4">
-<select type="text" class="form-control" name="catename" id="catename" required="">
-<option value="0">Select Category</option>
-<?php $query=mysqli_query($conn,"select * from tblcategory");
-while($row=mysqli_fetch_array($query))
-{
-  ?>    
- <option value="<?php echo $row['VehicleCat'];?>"><?php echo $row['VehicleCat'];?></option>
- <?php } ?>
-</select>
-<span class="messages"></span>
+		</div>
+		<div class="col-md-6">
+		    <img src="http://themebubble.com/demo/marketingpro/wp-content/uploads/2016/10/seo-slide.png "alt="">
+		</div>
+	</div>
 </div>
-<label class="col-sm-2 col-form-label">Vehicle Company</label>
-<div class="col-sm-4">
-<input type="text" class="form-control" id="vehcomp" name="vehcomp" placeholder="Vehicle Company" required="">
-<span class="messages"></span>
-</div>
-</div>
-
-
-<div class="form-group row">
-<label class="col-sm-2 col-form-label">Registration Number</label>
-<div class="col-sm-4">
-<input type="text" class="form-control" id="vehreno" name="vehreno"  placeholder="Registration Number"  required="">
-<span class="messages"></span>
-</div>
-<label class="col-sm-2 col-form-label">Owner Name</label>
-<div class="col-sm-4">
-<input type="text" id="ownername" name="ownername" class="form-control" placeholder="Owner Name"  required="true">
-<span class="messages"></span>
-</div>
-</div>
-
-
-<div class="form-group row">
-<label class="col-sm-2 col-form-label">Owner Contact Number</label>
-<div class="col-sm-4">
-<input type="text" id="ownercontno" name="ownercontno" class="form-control" placeholder="Owner Contact Number" required="true" maxlength="10" pattern="[0-9]+">
-<span class="messages"></span>
-</div>
-</div>
-
-<div class="form-group row">
-<label class="col-sm-2"></label>
-<div class="col-sm-10">
-<button type="submit" name="submit" class="btn btn-primary m-b-0">Submit</button>
-</div>
-</div>
-
-</form>
-
-
+</section>
 
 <!--Footer -->
 <?php include('includes/footer.php');?>
